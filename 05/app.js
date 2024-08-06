@@ -28,9 +28,18 @@ class weather extends React.Component {
                 loading: false,
             })
         })
+    }
 
+    render() {
+        const {data, loading, error } = this.state
 
+        if (loading) {
+            return <h2>Loading ....</h2>
+        }
 
+        if (error) {
+            return <h2>Error: {error.message}</h2>
+        }
     }
 
 
