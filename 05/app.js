@@ -40,6 +40,16 @@ class weather extends React.Component {
         if (error) {
             return <h2>Error: {error.message}</h2>
         }
+
+        return (
+            <div>
+                <h1>Informacje pogodowe</h1>
+                <p>Temperature: {data.temp}</p>
+                <p>City: {data.city_name}</p>
+                <p>Weather: {data.weather.description}</p>
+
+            </div>
+        )
     }
 
 
