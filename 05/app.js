@@ -47,10 +47,22 @@ class weather extends React.Component {
                 <p>Temperature: {data.temp}</p>
                 <p>City: {data.city_name}</p>
                 <p>Weather: {data.weather.description}</p>
-
             </div>
         )
     }
-
-
 }
+
+class App extends React.Component {
+    render () {
+
+        const apiKey = 'my API Key'
+
+        return (
+            <div>
+                <Weather lat={52.232222} lon={21.008333} apiKey={apiKey} />
+            </div>
+        )
+    }
+}
+
+root.render(<App />)
