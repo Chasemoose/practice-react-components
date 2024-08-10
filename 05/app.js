@@ -1,7 +1,9 @@
 import React from 'react'
-import { CreateRoot} from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 
-class weather extends React.Component {
+const root = createRoot(document.querySelector('#root'));
+
+class Weather extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -55,7 +57,7 @@ class weather extends React.Component {
 class App extends React.Component {
     render () {
 
-        const apiKey = 'my API Key'
+        // const apiKey = 'c9179e967f64414ab3799949f15269ff'
 
         return (
             <div>
