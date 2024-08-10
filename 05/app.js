@@ -46,9 +46,10 @@ class Weather extends React.Component {
         return (
             <div>
                 <h1>Informacje pogodowe</h1>
-                <p>Temperature: {data.temp}</p>
-                <p>City: {data.city_name}</p>
-                <p>Weather: {data.weather.description}</p>
+                <p>Temperatura: {data.temp}</p>
+                <p>Temperatura odczuwalna: {data.app_temp}</p>                
+                <p>Miasto: {data.city_name}</p>
+                <p>Pogoda: {data.weather.description}</p>
             </div>
         )
     }
@@ -57,7 +58,7 @@ class Weather extends React.Component {
 class App extends React.Component {
     render () {
 
-        // const apiKey = 'c9179e967f64414ab3799949f15269ff'
+        const apiKey = 'c9179e967f64414ab3799949f15269ff'
 
         return (
             <div>
