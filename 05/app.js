@@ -16,7 +16,7 @@ class Weather extends React.Component {
     componentDidMount() {
         const {lat, lon, apiKey} = this.props
 
-        fetch(`https://api.weatherbit.io/v2.0/current?key=${apiKey}&lat=${lat}&lon=${lon}`)
+        fetch(`https://api.weatherbit.io/v2.0/current?key=${apiKey}&lat=${lat}&lon=${lon}&lang=pl`)
         .then(response => response.json())
         .then(data => {
             this.setState({
@@ -46,8 +46,8 @@ class Weather extends React.Component {
         return (
             <div>
                 <h1>Informacje pogodowe</h1>
-                <p>Temperatura: {data.temp}</p>
-                <p>Temperatura odczuwalna: {data.app_temp}</p>                
+                <p>Temperatura: {data.temp}°C</p>
+                <p>Temperatura odczuwalna: {data.app_temp}°C</p>                
                 <p>Miasto: {data.city_name}</p>
                 <p>Pogoda: {data.weather.description}</p>
             </div>
