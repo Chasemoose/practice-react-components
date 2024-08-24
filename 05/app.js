@@ -2,7 +2,7 @@ import React from 'react'
 import { createRoot } from 'react-dom/client'
 
 const root = createRoot(document.querySelector('#root'));
-const apiKey = 'c9179e967f64414ab3799949f15269ff'
+const apiKey = 'my api key'
 
 class Weather extends React.Component {
     constructor(props) {
